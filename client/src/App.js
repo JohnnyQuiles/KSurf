@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
+import { AppShell, Navbar, NavLink, Header } from '@mantine/core'; import './App.css';
 import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <AppShell
+      padding="md"
+      navbar={<Navbar width={{ base: 300 }} height={1000} p="xs" className='NavBar'>{
+        <>
+          <NavLink icon={<p>Home</p>} className='NavLink' />
+          <NavLink icon={<p>About</p>} className='NavLink' />
+          <NavLink icon={<p>Products</p>} className='NavLink' />
+          <NavLink icon={<p>Contact Us</p>} className='NavLink' />
+        </>
+      }</Navbar>}
+      header={<Header height={82}>{
+        <h1>K Surf</h1>
+
+        
+      }</Header>
+
+      }
+      className='App'
+    >
+
+    
+    </AppShell>
+
+
+
+
   );
 }
 
